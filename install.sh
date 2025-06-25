@@ -2,7 +2,7 @@
 tput sgr0; clear
 
 ## Load Seedbox Components
-source <(wget -qO- https://raw.githubusercontent.com/jerry048/Seedbox-Components/main/seedbox_installation.sh)
+source <(wget -qO- https://raw.githubusercontent.com/wcwplaygitbub/pt-brush-flow/refs/heads/master/seedbox_installation.sh)
 # Check if Seedbox Components is successfully loaded
 if [ $? -ne 0 ]; then
 	echo "Component ~Seedbox Components~ failed to load"
@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
 fi
 
 ## Load loading animation
-source <(wget -qO- https://raw.githubusercontent.com/Silejonu/bash_loading_animations/main/bash_loading_animations.sh)
+source <(wget -qO- https://raw.githubusercontent.com/wcwplaygitbub/pt-brush-flow/refs/heads/master/bash_loading_animations.sh)
 # Check if bash loading animation is successfully loaded
 if [ $? -ne 0 ]; then
 	fail "Component ~Bash loading animation~ failed to load"
@@ -377,7 +377,7 @@ touch /root/.boot-script.sh && chmod +x /root/.boot-script.sh
 cat << EOF > /root/.boot-script.sh
 #!/bin/bash
 sleep 120s
-source <(wget -qO- https://raw.githubusercontent.com/jerry048/Seedbox-Components/main/seedbox_installation.sh)
+source <(wget -qO- https://raw.githubusercontent.com/wcwplaygitbub/pt-brush-flow/refs/heads/master/seedbox_installation.sh)
 # Check if Seedbox Components is successfully loaded
 if [ \$? -ne 0 ]; then
 	exit 1
