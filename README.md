@@ -2,7 +2,7 @@
 # Seedbox Installation Script
 ## 脚本来自 杰大，本人仅作了部分修改，修改了在已经安装了 docker 的系统中中安装 vertex 失败的问题，其他都保持不变
 ## 用法
-`bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) -u <用户名> -p <密码> -c <缓存大小(单位:MiB)> -q <qBittorrent 版本> -l <libtorrent 版本> -b -v -r -3 -x -o`
+`bash <(wget -qO- https://raw.githubusercontent.com/wcwplaygitbub/pt-brush-flow/refs/heads/master/install.sh) -u <用户名> -p <密码> -c <缓存大小(单位:MiB)> -q <qBittorrent 版本> -l <libtorrent 版本> -b -v -r -3 -x -o`
 #### Options
 	1. -u: 用户名密码
 	2. -p: 密码
@@ -16,7 +16,7 @@
 	10.-x: 启动 BBRx
 	11.-o: 自定义端口
 #### 示例
-`bash <(wget -qO- https://raw.githubusercontent.com/jerry048/Dedicated-Seedbox/main/Install.sh) -u jerry048 -p 1LDw39VOgors -c 3072 -q 4.3.9 -l v1.2.20 -v -x`
+`bash <(wget -qO- https://raw.githubusercontent.com/wcwplaygitbub/pt-brush-flow/refs/heads/master/install.sh) -u jerry048 -p 1LDw39VOgors -c 3072 -q 4.3.9 -l v1.2.20 -v -x`
 
 ##### 解释
 	1. 用户名 是 jerry048
