@@ -1,3 +1,10 @@
+# 由于netcup机器有流量限制 如果24小时超过了2t就会限速。为了更快的恢复速度，暂时关闭qbit，速度恢复后会自动启动
+
+## 用法
+	- 复制qbit_monitor.sh到 /root/ 目录下。
+	- chmod +x 复制qbit_monitor.sh
+	- crontab -e 增加 */30 * * * * /root/qbit_monitor.sh >> /var/log/qbit_monitor.log 2>&1
+## 注意：这个脚本只在ubuntu 22下试过，别的自己找ai改改，同时由于我的qbit是使用 杰大的脚本起来的，用了system service启动，所以要根据自己的启动方式调整 启动命令。
 
 # Seedbox Installation Script
 ## 脚本来自 杰大，本人仅作了部分修改，修改了在已经安装了 docker 的系统中中安装 vertex 失败的问题，其他都保持不变
