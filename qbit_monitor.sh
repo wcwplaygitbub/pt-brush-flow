@@ -110,13 +110,13 @@ run_speedtest() {
     result=$(speedtest-cli --simple 2>/dev/null)
     
     if [ -z "$result" ]; then
-        log "Speedtest failed"
+        log "Speedtest failed, start qbit"
+        start_qbit
         return 1
     fi
     
     download=$(echo "$result" | grep Download | awk '{print $2}')
     upload=$(echo "$result" | grep Upload | awk '{print $2}')
-    
     log "Speedtest results - Download: $download Mbps, Upload: $upload Mbps"
     
     # 返回下载和上传速度
@@ -199,7 +199,7 @@ else
         exit 1
     fi
     
-    if (( $(echo "$download > $SPEEDTEST_THRESHOLD_HIGH && $upload > $SPEEDTEST_THRESHOLD_HIGH" | bc -l) )); then
+    if (( $(echo "$download > $SPEEDTEST_THRESHOLD_HIGH || $upload > $SPEEDTEST_THRESHOLD_HIGH" | bc -l) )); then
         log "Network speed is high, starting qBittorrent..."
         start_qbit
     else
